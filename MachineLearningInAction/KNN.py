@@ -1,3 +1,4 @@
+#encoding = utf-8
 from numpy import *
 import operator
 
@@ -31,7 +32,6 @@ def classify0(inX, dataSet, labels, k):
 	#calculate distance
 	diffMat = tile(inX, (dataSetSize, 1)) - dataSet
 	sqDiffMat = diffMat ** 2
-	#sqDiffMat = square(diffMat) 
 	sqDistances = sqDiffMat.sum(axis = 1)
 	distances = sqDistances ** 0.5
 
@@ -42,4 +42,40 @@ def classify0(inX, dataSet, labels, k):
 		voteIlabel = labels[sortedDistIndicies[i]]
 		classCount[voteIlabel] = classCount.get(voteIlabel, 0) + 1
 	sortedClassCount = sorted(classCount.iteritems(), key = operator.itemgetter(1), reverse = True)
+
 	return sortedClassCount[0][0]
+
+#norm
+def autoNorm(dataSet):
+	minVals = dataSet.min(axis = 0)
+	print 'minvals = ' , minVals
+	maxVals = dataSet.max(axis = 0)
+	print 'maxvals = ' , maxVals
+	ranges = maxVals - minVals
+	normDataSet = zeros(shape(dataSet))
+	m = dataSet.shape[0]
+	normDataSet = dataSet - tile(minVals, (m, 1))
+	normDataSet = normDataSet / tile(ranges, (m, 1))
+
+
+	return normDataSet, ranges, minVals
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
