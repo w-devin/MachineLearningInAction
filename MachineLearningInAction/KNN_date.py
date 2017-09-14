@@ -63,7 +63,7 @@ def classify0(inX, dataSet, labels, k):
 def datingClassTest():
 	hoRatio= 0.10
 
-	datingDataMat, datingLabels = file2matrix('/DatingTestSet/datingTestSet2.txt')
+	datingDataMat, datingLabels = file2matrix('./Datas/DatingTestSet/datingTestSet2.txt')
 	normMat, ranges, minVals = autoNorm(datingDataMat)
 	m = normMat.shape[0]
 	numTestVecs = int(m * hoRatio)
@@ -83,7 +83,7 @@ def main():
 	ffMiles = float(raw_input('frequent flier miles earned per year?'))
 	iceCream = float(raw_input('liters of ice cream consumed per year?'))
 
-	datingDataMat, datingLabels = file2matrix('./DatingTestSet/datingTestSet2.txt')
+	datingDataMat, datingLabels = file2matrix('./Datas/DatingTestSet/datingTestSet2.txt')
 	normMat, ranges, minVals = autoNorm(datingDataMat)
 	inArr = array([ffMiles, percentTats, iceCream])
 	classifierResult = classify0((inArr - minVals) / ranges, normMat, datingLabels, 3)
