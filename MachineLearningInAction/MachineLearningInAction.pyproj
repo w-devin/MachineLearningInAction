@@ -21,14 +21,18 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="KNN.py">
+    <Compile Include="KNN_date.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="MachineLearningInAction.py" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="datingTestSet.txt" />
-    <Content Include="datingTestSet2.txt" />
+    <Content Include="DatingTestSet\datingTestSet.txt" />
+    <Content Include="DatingTestSet\datingTestSet2.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DatingTestSet\" />
+    <Folder Include="TrainingDigits\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
