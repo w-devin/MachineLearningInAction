@@ -21,7 +21,13 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="KNN_date.py">
+    <Compile Include="KNN.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="KNN_Date.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="KNN_HandWriting.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="MachineLearningInAction.py" />
@@ -30,12 +36,23 @@
     <Folder Include="Datas\" />
     <Folder Include="Datas\DatingTestSet\" />
     <Folder Include="Datas\digits\" />
+    <Folder Include="Datas\digits\images\" />
     <Folder Include="Datas\digits\testDigits\" />
     <Folder Include="Datas\digits\trainingDigits\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Datas\DatingTestSet\datingTestSet.txt" />
     <Content Include="Datas\DatingTestSet\datingTestSet2.txt" />
+    <Content Include="Datas\digits\images\0.png" />
+    <Content Include="Datas\digits\images\1.png" />
+    <Content Include="Datas\digits\images\2.png" />
+    <Content Include="Datas\digits\images\3.png" />
+    <Content Include="Datas\digits\images\4.png" />
+    <Content Include="Datas\digits\images\5.png" />
+    <Content Include="Datas\digits\images\6.png" />
+    <Content Include="Datas\digits\images\7.png" />
+    <Content Include="Datas\digits\images\8.png" />
+    <Content Include="Datas\digits\images\9.png" />
     <Content Include="Datas\digits\testDigits\0_0.txt" />
     <Content Include="Datas\digits\testDigits\0_1.txt" />
     <Content Include="Datas\digits\testDigits\0_10.txt" />
