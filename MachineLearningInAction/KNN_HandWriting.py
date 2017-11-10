@@ -10,6 +10,7 @@ import cv2
 #
 # 32 x 32 pictures of handwriting
 # Identify the numbers on these pictures
+# But the error rate is too high
 #
 
 width = 32

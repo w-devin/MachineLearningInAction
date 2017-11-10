@@ -18,18 +18,18 @@ ax.scatter(group[:, 0], group[:, 1], 32 * array(labels), 32 * array(labels))
 '''
 
 
+#test of the class KNN_HandWriting
+'''
 import KNN_HandWriting
-
-#Datas = KNN_HandWriting.img2vector(r'Datas/digits/testDigits/0_0.txt')
-
-#print Datas[0, 0:31]
-
-#import KNN_Date
-
-#KNN_HandWriting.handwritingClassTest()
-
+Datas = KNN_HandWriting.img2vector(r'Datas/digits/testDigits/0_0.txt')
+print Datas[0, 0:31]
+import KNN_Date
+KNN_HandWriting.handwritingClassTest()
+'''
 
 #test with identify the number in image file, but with very low efficienty
+'''
+import KNN_HandWriting
 imagePath = r'Datas\digits\images'
 
 testFileList = os.listdir(imagePath)
@@ -51,4 +51,45 @@ for i in range(mTest):
 
 print 'the total number of errors is %d\n' % errorCount
 print 'the total error rate is %f\n' % (errorCount / float(mTest))
+'''
+
+
+#Bayes
+
+import NaiveBayes as bayes 
+
+#test of trainNaiveBayes
+'''
+listOPosts, listClasses = bayes.loadDataSet()			#generate test data
+myVocabList = bayes.createVocabList(listOPosts)			#generate vocabulary list
+myVocabList = sort(myVocabList)			#sort the vocabulary list
+
+trainMat = []
+for postinDoc in listOPosts:
+	trainMat.append(bayes.setOfWords2Vec(myVocabList, postinDoc))
+
+p0v, p1v, pAb = bayes.trainNaiveBayes0(trainMat, listClasses)
+
+print pAb
+print p0v
+print p1v
+'''
+
+#test of naive bayes
+'''
+bayes.testingNaiveBayse()
+'''
+
+#test of bagOfWord2Vec
+'''
+listOPosts, listClasses = bayes.loadDataSet()	
+myVocabList = sort(bayes.createVocabList(listOPosts))			
+doc = bayes.bagOfWords2VecMN(myVocabList, listOPosts[0])
+
+print doc
+'''
+
+import NaiveBayes_spam as spam
+
+spam
 
