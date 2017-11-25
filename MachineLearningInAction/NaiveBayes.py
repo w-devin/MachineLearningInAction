@@ -26,7 +26,7 @@ def createVocabList(dataSet):
 	for document in dataSet:
 		vocabSet = vocabSet | set(document)
 
-	return list(vocabSet)
+	return sort(list(vocabSet))
 
 #
 def setOfWords2Vec(vocabList, inputSet):
@@ -35,7 +35,7 @@ def setOfWords2Vec(vocabList, inputSet):
 	for word in inputSet:
 		if word in vocabList:
 			#numpy.ndarray object has no attribute 'index', so need transform vocabList to list by .tolist()
-			returnVec[vocabList.tolist().index(word)] = 1			
+			returnVec[vocabList.index(word)] = 1			
 		else: print "the word: %s is not in my Vocabulary!" % word
 	return returnVec
 
@@ -82,9 +82,9 @@ def classifyNaiveBayse(vec2Classify, p0Vec, p1Vec, pClass1):
 	#1:insulting 0:normal
 
 	if p1 > p0:
-		return 'insulting'
+		return 1
 	else:
-		return 'normal'
+		return 0
 
 def testingNaiveBayse():
 	listOPosts, listClasses = loadDataSet()

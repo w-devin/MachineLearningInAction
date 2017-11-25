@@ -31,7 +31,11 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="MachineLearningInAction.py" />
+    <Compile Include="MaxMin.py" />
     <Compile Include="NaiveBayes.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NaiveBayes_RSS.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="NaiveBayes_spam.py">
