@@ -30,6 +30,7 @@
     <Compile Include="KNN_HandWriting.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="LinerClassify.py" />
     <Compile Include="MachineLearningInAction.py" />
     <Compile Include="MaxMin.py" />
     <Compile Include="NaiveBayes.py">
