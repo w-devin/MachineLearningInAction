@@ -5,6 +5,7 @@ import numpy as np
 import math
 import random
 import time
+import sys
 
 def distance(List, a, b):
 	return math.sqrt((List[a][0] - List[b][0]) ** 2 + (List[a][1] - List[b][1]) ** 2)

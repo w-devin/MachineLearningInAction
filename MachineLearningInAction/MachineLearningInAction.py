@@ -112,7 +112,6 @@ vocabList, pSF, pNY = rss.localWords(ny, sf)
 '''
 
 #MaxMin classifier
-'''
 import MaxMin as mm
 import random
 import numpy as np
@@ -121,4 +120,3 @@ Points = np.array([[0, 0], [3, 8], [2, 2], [1, 1], [5, 3], [4, 8], [6, 3], [5, 4
 
 mm.MaxMin(Points, 0.6, 0)
 #mm.MaxMin(Points, 0.6, random.randint(0, len(Points) - 1))
-'''
