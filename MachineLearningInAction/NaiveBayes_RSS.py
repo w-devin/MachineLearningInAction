@@ -1,3 +1,4 @@
+#encoding=utf-8
 import random
 import NaiveBayes as bayes
 import NaiveBayes_spam as spam
